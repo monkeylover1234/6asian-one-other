@@ -31,6 +31,8 @@ right_motor = Motor(Port.C)
 robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 ultrasoniceSensor = UltrasonicSensor(Port.S1)
 
+settings(10000, 10000,10000,10000)
+
 andy.findRobot(ev3, robot, ultrasonicSensor)
 
 # Go forward and backwards for one meter.
