@@ -31,9 +31,13 @@ right_motor = Motor(Port.C)
 robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 ultrasoniceSensor = UltrasonicSensor(Port.S1)
 
-settings(10000, 10000,10000,10000)
+settings(1000, 1000,1000,1000)
 
-andy.findRobot(ev3, robot, ultrasonicSensor)
+while True:
+    if ultrasonicSensor.dstance() > 500:
+        andy.findRobot(ev3, robot, ultrasonicSensor)
+    if ultrasonicSensor.distance() < 500:
+        andy.charge(ev3, robot, ultrasonicSensor)
 
 # Go forward and backwards for one meter.
 robot.straight(1000)
