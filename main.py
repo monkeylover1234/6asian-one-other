@@ -29,6 +29,7 @@ right_motor = Motor(Port.C)
 # Initialize the drive base. 
 # MIGHT WANT TO CHECK TO MAKE SURE THIS IS RIGHT
 robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
+ultrasoniceSensor = UltrasonicSensor(Port.S1)
 
 andy.findRobot(ev3, robot, ultrasonicSensor)
 
