@@ -7,6 +7,11 @@ from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 
 def findRobot(ev3, robot, ultrasonicSensor):
-    while ultrasonicSensor.distance() > 200: 
+    while ultrasonicSensor.distance() > 500: 
         ev3.screen.print(ultrasonicSensor.distance())
-        robot.drive(0,15)
+        robot.drive(0,30)
+
+def findRobot(ev3, robot, ultrasonicSensor):
+    while ultrasonicSensor.distance() < 500: 
+        ev3.screen.print(ultrasonicSensor.distance())
+        robot.drive(1100,0)
