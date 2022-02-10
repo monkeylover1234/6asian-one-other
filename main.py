@@ -9,6 +9,8 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 
 import challengeTemplate
 
+import andy
+
 # Use the following links to access the documentation
 # How to control the EV3: https://docs.pybricks.com/en/v2.0/hubs.html#pybricks.hubs.EV3Brick
 # How to control the robot: https://docs.pybricks.com/en/v2.0/ev3devices.html
@@ -27,6 +29,8 @@ right_motor = Motor(Port.C)
 # Initialize the drive base. 
 # MIGHT WANT TO CHECK TO MAKE SURE THIS IS RIGHT
 robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
+
+andy.findRobot(ev3, robot, ultrasonicSensor)
 
 # Go forward and backwards for one meter.
 robot.straight(1000)
