@@ -42,7 +42,7 @@ while True:
     if ultrasonicSensor.distance() > 500:
         andy.findRobot(ev3, robot, ultrasonicSensor)
     if ultrasonicSensor.distance() < 500:
-        andy.charge(ev3, robot, ultrasonicSensor)
+        andy.chargeRobot(ev3, robot, ultrasonicSensor)
 
 # Go forward and backwards for one meter.
 robot.straight(1000)
