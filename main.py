@@ -33,8 +33,13 @@ ultrasoniceSensor = UltrasonicSensor(Port.S1)
 
 settings(1000, 1000,1000,1000)
 
+# Un-comment this line when no longer testing. This will attempt to push figure off table
+# robot.straight(10000)
+
+# This code detects the other robot (or any obstacle) and charges toward it
+
 while True:
-    if ultrasonicSensor.dstance() > 500:
+    if ultrasonicSensor.distance() > 500:
         andy.findRobot(ev3, robot, ultrasonicSensor)
     if ultrasonicSensor.distance() < 500:
         andy.charge(ev3, robot, ultrasonicSensor)
