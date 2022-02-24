@@ -39,9 +39,9 @@ robot.settings(1000, 1000,1000,1000)
 # This code detects the other robot (or any obstacle) and charges toward it
 
 while True:
-    if ultrasonicSensor.distance() > 500:
+    if ultrasonicSensor.distance() > 250:
         andy.findRobot(ev3, robot, ultrasonicSensor)
-    if ultrasonicSensor.distance() < 500:
+    if ultrasonicSensor.distance() <= 250:
         andy.chargeRobot(ev3, robot, ultrasonicSensor)
 
 # Go forward and backwards for one meter.
