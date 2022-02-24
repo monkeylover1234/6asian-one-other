@@ -31,7 +31,7 @@ right_motor = Motor(Port.C)
 robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 ultrasoniceSensor = UltrasonicSensor(Port.S1)
 
-settings(1000, 1000,1000,1000)
+robot.settings(1000, 1000,1000,1000)
 
 # Un-comment this line when no longer testing. This will attempt to push figure off table
 # robot.straight(10000)
