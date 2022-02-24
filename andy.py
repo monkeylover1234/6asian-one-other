@@ -11,7 +11,7 @@ def findRobot(ev3, robot, ultrasonicSensor):
         ev3.screen.print(ultrasonicSensor.distance())
         robot.drive(0,30)
 
-def findRobot(ev3, robot, ultrasonicSensor):
+def chargeRobot(ev3, robot, ultrasonicSensor):
     while ultrasonicSensor.distance() < 500: 
         ev3.screen.print(ultrasonicSensor.distance())
         robot.drive(1100,0)
