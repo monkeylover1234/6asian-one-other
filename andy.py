@@ -9,9 +9,9 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 def findRobot(ev3, robot, ultrasonicSensor):
     while ultrasonicSensor.distance() > 500: 
         ev3.screen.print(ultrasonicSensor.distance())
-        robot.drive(0,30)
+        robot.drive(0,180)
 
 def chargeRobot(ev3, robot, ultrasonicSensor):
-    while ultrasonicSensor.distance() < 500: 
+    while ultrasonicSensor.distance() <= 500: 
         ev3.screen.print(ultrasonicSensor.distance())
-        robot.drive(1100,0)
+        robot.drive(10000,0)
